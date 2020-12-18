@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'smartstock-privacy',
   template: `
+  <div  style="background: #d1f4e6">
       <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="/">
               SmartStock
@@ -44,6 +45,7 @@ import {Component, OnInit} from '@angular/core';
           </div>
           <smartstock-footer></smartstock-footer>
       </div>
+</div>
   `,
   styleUrls: ['../styles/privacy.style.scss']
 })

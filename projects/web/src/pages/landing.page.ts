@@ -1,11 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {FormControl} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'smartstock-landing',
   template: `
-    <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light bg-light">
+  <div  style="background: #d1f4e6">
+    <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light shadow p-3 " style="background: #d1f4e6">
+      <div class="container">
+      
       <a class="navbar-brand" href="">
         SmartStock
       </a>
@@ -36,21 +39,32 @@ import {FormControl} from '@angular/forms';
       <button routerLink="/account/login" class="btn btn-outline-success">Login</button>
       <span style="width: 10px; height: 10px"></span>
       <button routerLink="/account/register" class="btn btn-outline-success">Register</button>
+</div>
     </nav>
 
-    <section class="header d-flex flex-column">
-      <div class="header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
-        <h4 class="">
-          You can’t continue using papers <br> to keep records of your business.
-        </h4>
-        <p style="padding: 10px">Start your sales with us, today</p>
-        <button mat-flat-button color="primary" routerLink="/account/register" class=" header-btn">Open Account For Free</button>
-        <!--    <button style="font-size: 18px;" mat-button routerLink="/account/login" class="">Login To Your Shop</button>-->
-      </div>
+    <section class="header d-flex flex-column container">
+     <div class="header-img header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
 
+        </div>  
+    <div class="row">
+        <div class=" header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
+          <h1 class="header-text">Get your sales where you are...</h1>  
+        </div>
+        
+        </div>
+        <div>
+        <h4 class="">
+            You can’t continue using papers <br> to keep records of your business.
+          </h4>
+          <p style="padding: 10px">Start your sales with us, today</p>
+          <button mat-flat-button color="primary" routerLink="/account/register" class=" header-btn">Open Account For Free</button>
+          <!--    <button style="font-size: 18px;" mat-button routerLink="/account/login" class="">Login To Your Shop</button>-->
+        </div>
+        
+   
     </section>
 
-    <section style="padding-top: 16px" class="why-smartstock" id="why-us">
+    <section style="padding-top: 16px " class="why-smartstock" id="why-us">
       <div class="container">
         <h4>Why Smartstock?</h4>
         <mat-divider></mat-divider>
@@ -105,7 +119,7 @@ import {FormControl} from '@angular/forms';
       </div>
     </section>
 
-    <section style="padding-top: 36px" id="pricing">
+    <section style="padding-top: 36px; background: #d1f4e6" id="pricing">
       <div class="container">
         <h4>Price Calculator</h4>
         <mat-divider></mat-divider>
@@ -195,6 +209,7 @@ import {FormControl} from '@angular/forms';
         </div>
       </div>
     </section>
+</div>
   `,
   styleUrls: ['../styles/landing.style.scss']
 })
