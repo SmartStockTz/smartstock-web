@@ -1,6 +1,6 @@
 {
   "name": "@smartstocktz/web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/smartstocktz"
   },
@@ -10,7 +10,7 @@
   "peerDependencies": {
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6",
-    "bfastjs": "^4.0.0-beta.25"
+    "bfastjs": "^4.0.5"
   },
   "dependencies": {
     "tslib": "^2.0.0"
