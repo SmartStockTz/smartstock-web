@@ -8,8 +8,8 @@
     "url": "git://github.com/smartstocktz/smartstock-web.git"
   },
   "peerDependencies": {
-    "@angular/common": "^10.1.6",
-    "@angular/core": "^10.1.6",
+    "@angular/common": "^11.0.5",
+    "@angular/core": "^11.0.5",
     "bfastjs": "^4.0.5"
   },
   "dependencies": {
