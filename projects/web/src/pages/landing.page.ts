@@ -42,31 +42,48 @@ import { FormControl } from '@angular/forms';
 </div>
     </nav>
 
-    <section class="header d-flex flex-column container">
-     <div class="header-img header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
+    <section class="header-sm header d-flex flex-column container">
+        <div class="header-img header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
 
         </div>  
-    <div class="row">
-        <div class=" header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
-          <h1 class="header-text">Get your sales where you are...</h1>  
+        <div class="row">
+        <div class="header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
+          <h1 class="header-text">AI-Powered Sales and Stock Management Software...</h1>  
         </div>
         
         </div>
-        <div>
-        <h4 class="">
-            You can’t continue using papers <br> to keep records of your business.
-          </h4>
-          <p style="padding: 10px">Start your sales with us, today</p>
+        <div class="header-sub-text">
+        <p style="line-height: 4vh">
+             You can’t continue using papers <br> to keep records of your business.
+            <p>
+             <p style="padding-top: 2vh; padding-bottom: 2vh">Start your sales with us, today</p>
           <button mat-flat-button color="primary" routerLink="/account/register" class=" header-btn">Open Account For Free</button>
           <!--    <button style="font-size: 18px;" mat-button routerLink="/account/login" class="">Login To Your Shop</button>-->
         </div>
-        
-   
+    </section>
+
+    <section class="header-lg header d-flex flex-column container">
+        <div class="row">
+        <div class="col-6 header-jumbo flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
+          <h1 class="header-text">AI-Powered Sales and Stock Management Software...</h1>  
+          <div class="header-sub-text">
+            <p style="line-height: 4vh">
+             You can’t continue using papers <br> to keep records of your business.
+            <p>
+             <p style="padding-top: 2vh; padding-bottom: 2vh">Start your sales with us, today</p>
+             <button mat-flat-button color="primary" routerLink="/account/register" class=" header-btn">Open Account For Free</button>
+            <!--    <button style="font-size: 18px;" mat-button routerLink="/account/login" class="">Login To Your Shop</button>-->
+        </div>
+        </div>
+        <div class="col-6 header-img header-jumbo flex-grow-1 container d-flex align-items-start flex-column">
+
+        </div> 
+        </div>
     </section>
 
     <section style="padding-top: 16px " class="why-smartstock" id="why-us">
       <div class="container">
-        <h4>Why Smartstock?</h4>
+        <h1>Why Smartstock?</h1>
         <mat-divider></mat-divider>
         <div class="row">
           <div class="col-md-3 text-center">
@@ -101,10 +118,10 @@ import { FormControl } from '@angular/forms';
             </p>
           </div>
           <div class="col-md-3 text-center">
-            <img src="/assets/img/raws/“$”.svg" width="50%" style="padding: 19px 10px">
-            <h4>Pay As You Use</h4>
+            <img src="/assets/img/customisable_icon.png" width="50%" style="padding: 19px 10px">
+            <h4>Business Intelligence</h4>
             <p>
-              Pay for what you use in a month, and not for packages.
+              Artificial Intelligence Algorithms to provide business insights to increase sales.
             </p>
           </div>
           <div class="col-md-3 text-center">
@@ -121,84 +138,82 @@ import { FormControl } from '@angular/forms';
 
     <section style="padding-top: 36px; background: #d1f4e6" id="pricing">
       <div class="container">
-        <h4>Price Calculator</h4>
+        <h1>Pricing</h1>
         <mat-divider></mat-divider>
         <div style="margin-top: 60px" class="container">
-      <span>
-        We understand price is a sensitive issue for business.
-        <br>
-        You will pay for what you use only no hidden payment or adds on cost.
-        The maximum payment you will pay is <b>TZS 150,000 ( $65 )</b> and the minimum payment you will pay is <b>TZS 17,000 ( $7 )</b>
-      </span>
+      
           <div style="" class="row">
             <div
-              class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-8 box-shadow d-flex flex-column align-items-start justify-content-center">
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 box-shadow d-flex flex-column align-items-start justify-content-center">
               <div class="btn-block">
-                <mat-card-subtitle>Total Products</mat-card-subtitle>
-                <div class="btn-block d-flex flex-row flex-nowrap">
-                  <mat-slider thumbLabel
-                              class="flex-grow-1"
-                              [displayWith]="formatLabel"
-                              [(ngModel)]="totalProducts"
-                              color="primary"
-                              [tickInterval]="1"
-                              min="1" max="10000"
-                              step="1">
-                  </mat-slider>
-                  <input class="pricing-input" [(ngModel)]="totalProducts" type="number" min="1">
-                </div>
-
-                <mat-card-subtitle>Total Items You Sale Per month</mat-card-subtitle>
-                <div class="btn-block d-flex flex-row flex-nowrap">
-                  <mat-slider thumbLabel
-                              class="flex-grow-1"
-                              [displayWith]="formatLabel"
-                              [(ngModel)]="totalSales"
-                              color="primary"
-                              [tickInterval]="1"
-                              min="1" max="10000"
-                              step="1">
-                  </mat-slider>
-                  <input [(ngModel)]="totalSales" class="pricing-input" type="number" min="1">
-                </div>
-
-                <mat-card-subtitle>Total Items You Purchase Per month</mat-card-subtitle>
-                <div class="btn-block d-flex flex-row flex-nowrap">
-                  <mat-slider thumbLabel
-                              class="flex-grow-1"
-                              [displayWith]="formatLabel"
-                              [(ngModel)]="totalPurchases"
-                              color="primary"
-                              [tickInterval]="1"
-                              min="1" max="10000"
-                              step="1">
-                  </mat-slider>
-                  <input class="pricing-input" [(ngModel)]="totalPurchases" type="number" min="1">
-                </div>
+              <div class="card-deck mb-3 text-center">
+        <div class="card mb-4  shadow  card-pricing">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Small</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">TSH 30,000 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>2 users included</li>
+              <li>1 shop</li>
+              <li>Online Access</li>
+              <li>Help center and training access</li>
+            </ul>
+            <button style="background: #00AA07; color: white" routerLink="/account/register" type="button" class="btn btn-lg btn-block">Get Started</button>
+          </div>
+        </div>
+        <div class="card mb-4 shadow card-pricing">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">TSH 50,000 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>4 users included</li>
+              <li>2 shops</li>
+              <li>Online Access</li>
+              <li>Help center and training access</li>
+            </ul>
+            <button style="background: #00AA07; color: white" routerLink="/account/register" type="button" class="btn btn-lg btn-block">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 shadow card-pricing">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Medium</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">TSH 70,000 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>6 users included</li>
+              <li>3 shops</li>
+              <li>Online Access</li>
+              <li>Help center and training access</li>
+            </ul>
+            <button style="background: #00AA07; color: white" routerLink="/account/register" type="button" class="btn btn-lg btn-block ">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 shadow card-pricing">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">TSH 100,000 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Unlimited Users</li>
+              <li>5 shops</li>
+              <li>Online Access</li>
+              <li>Help center and training access</li>
+            </ul>
+            <button style="background: #00AA07; color: white" routerLink="/account/register" type="button" class="btn btn-lg btn-block">Get started</button>
+          </div>
+        </div>
+      </div>
 
               </div>
             </div>
 
-            <div style="padding: 24px" class="col-12 col-sm-12 col-md-4 col-xl-4 col-lg-6 box-shadow d-flex flex-column">
-              <!--          <mat-card-subtitle></mat-card-subtitle>-->
-              <mat-form-field class="btn-block" appearance="outline">
-                <mat-label>Choose Currency</mat-label>
-                <mat-select [formControl]="currencyFormControl">
-                  <mat-option [value]="'TZS'">TZS</mat-option>
-                  <mat-option [value]="'$'">USD</mat-option>
-                </mat-select>
-              </mat-form-field>
-              <!--          <mat-card-subtitle>Actual cost</mat-card-subtitle>-->
-              <!--          <h6>{{actualMonthlyCost() | currency: currencyFormControl.value + ' '}}</h6>-->
-              <!--          <mat-card-subtitle>Discount</mat-card-subtitle>-->
-              <!--          <h6>{{discount() | currency: currencyFormControl.value + ' '}}</h6>-->
-              <mat-card-subtitle>Your Approximately Monthly Payment</mat-card-subtitle>
-              <h4>{{monthlyCost() | currency: currencyFormControl.value + ' '}}</h4>
-              <span class="flex-grow-1"></span>
-            </div>
-
             <button style="margin-top: 24px" mat-button color="primary" routerLink="/account/register"
-                    class="col-sm-12 col-md-12 col-12 col-xl-4 col-lg-4 header-btn-secondary">
+                    class="col-12 header-btn-secondary shadow">
               Open Account For Free
             </button>
 

@@ -35,7 +35,7 @@ import {Component, OnInit} from '@angular/core';
               <a class="text-muted" target="_blank"
                  href="">
                 <img style="background: black" width="182" alt="Download for windows"
-                     src="../../../web-mock/src/assets/raws/window_badge.png">
+                     src="/assets/img/window_badge.png">
               </a>
             </li>
             <!--        <li><a class="text-muted" href="#">MacOS Application</a></li>-->
