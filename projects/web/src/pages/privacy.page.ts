@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'smartstock-privacy',
+  selector: 'app-privacy',
   template: `
   <div  style="background: #d1f4e6">
       <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light bg-light">
@@ -43,7 +43,7 @@ import {Component, OnInit} from '@angular/core';
               <!--    <p><a target="_blank" href="https://getterms.io" title="Generate a free privacy policy">Privacy
               Policy created with GetTerms.</a></p>-->
           </div>
-          <smartstock-footer></smartstock-footer>
+          <app-footer></app-footer>
       </div>
 </div>
   `,

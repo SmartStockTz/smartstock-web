@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'smartstock-landing',
+  selector: 'app-landing',
   template: `
     <div style="background: #d1f4e6">
       <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light shadow p-3 "
@@ -233,7 +233,7 @@ import {FormControl} from '@angular/forms';
 
             </div>
 
-            <smartstock-footer></smartstock-footer>
+            <app-footer></app-footer>
 
           </div>
         </div>
