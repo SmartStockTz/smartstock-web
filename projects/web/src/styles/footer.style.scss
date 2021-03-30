@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 .foo {
-  background: #d1f4e6;
-  margin-bottom: 48px;
+  //background: #d1f4e6;
+  //margin-bottom: 48px;
   /*margin: 100 px 0 0 0;*/
 }
 
@@ -25,4 +25,27 @@
 a {
   text-decoration: none;
   color: #000000;
+}
+.snap-store{
+  background: #252525 url("/assets/img/snap-store-badge.svg") no-repeat center;
+  //height: 10vh;
+  border-radius: 8px;
+  background-size: contain;
+}
+
+.windows-store{
+  background: #000000 url("/assets/img/window_badge.png") no-repeat center;
+  //height: 10vh;
+  border-radius: 8px;
+  background-size: contain;
+}
+
+.play-store{
+  background: #000000 url("/assets/img/google_play_badge.png") no-repeat center;
+  //height: 10vh;
+  border-radius: 8px;
+  background-size: contain;
+}
+footer {
+  padding: 3vh 0;
 }

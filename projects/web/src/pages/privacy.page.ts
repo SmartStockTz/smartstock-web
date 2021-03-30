@@ -3,25 +3,26 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-privacy',
   template: `
-  <div  style="background: #d1f4e6">
-      <nav style="top: 0; z-index: 10000" class="navbar position-sticky navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/">
-              SmartStock
-          </a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-              </ul>
-          </div>
-          <span class="flex-grow-1"></span>
-          <button routerLink="/account/login" class="btn btn-outline-success">Login</button>
-          <span style="width: 10px; height: 10px"></span>
-          <button routerLink="/account/register" class="btn btn-outline-success">Register</button>
-      </nav>
+  <div>
+    <nav class="navbar w-100 position-sticky navbar-light shadow p-3 ">
       <div class="container">
-          <div style="margin-top: 48px">
-              <h2>Privacy Policy</h2>
+        <a class="navbar-brand" href="">
+          SmartStock
+        </a>
+        <span class="flex-grow-1"></span>
+        <button routerLink="/account/login" class="btn btn-outline-success mx-2">Login</button>
+        <button routerLink="/account/register" class="btn btn-outline-success">Register</button>
+      </div>
+    </nav>
+      <section class="container ">
+        <div class="row m-0 align-items-center justify-content-center ">
+          <h1 class="col-lg-3 header-text">Privacy Policy</h1>
+          <img src="/assets/img/privacy_policy.svg" class="col-lg-8">
+        </div>
+      </section>
+      <div class="container text-muted policy">
               <p>Your privacy is important to us. It is Fahamu Tech's policy to respect your privacy regarding any information we
-                  may collect from you across our website, <a href="http://smartstock.co.tz">http://smartstock.co.tz</a>, and other
+                  may collect from you across our website, <a class="text-success" href="http://smartstock.co.tz">http://smartstock.co.tz</a>, and other
                   sites and desktop application we own and operate.</p>
               <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and
                   lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be
@@ -42,19 +43,55 @@ import {Component, OnInit} from '@angular/core';
               <p>This policy is effective as of 19 February 2020.</p>
               <!--    <p><a target="_blank" href="https://getterms.io" title="Generate a free privacy policy">Privacy
               Policy created with GetTerms.</a></p>-->
-          </div>
-          <app-footer></app-footer>
       </div>
+    <div class="container">
+      <app-footer></app-footer>
+    </div>
 </div>
   `,
   styleUrls: ['../styles/privacy.style.scss']
 })
-export class PrivacyPageComponent implements OnInit {
+export class PrivacyPageComponent implements OnInit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
 
   constructor() {
   }
 
   ngOnInit(): void {
+    window.scroll(0, 0);
+
   }
 
 }

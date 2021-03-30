@@ -36,6 +36,7 @@ $web-mock-theme: mat-light-theme((
 
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
