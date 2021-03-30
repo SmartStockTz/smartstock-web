@@ -12,6 +12,8 @@ import {MatOptionModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {BrowserPlatformGuard} from './guards/browser-platform.guard';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatListModule} from '@angular/material/list';
 
 const routes: Routes = [
   {
@@ -28,27 +30,29 @@ const routes: Routes = [
     FooterComponent,
     PrivacyPageComponent
   ],
-  imports: [
-    CommonModule,
-    {
-      providers: [
+    imports: [
+        CommonModule,
         {
-          multi: true,
-          provide: ROUTES,
-          useValue: routes
-        }
-      ],
-      ngModule: RouterModule
-    },
-    MatDividerModule,
-    FormsModule,
-    MatCardModule,
-    MatSliderModule,
-    MatOptionModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatButtonModule
-  ],
+            providers: [
+                {
+                    multi: true,
+                    provide: ROUTES,
+                    useValue: routes
+                }
+            ],
+            ngModule: RouterModule
+        },
+        MatDividerModule,
+        FormsModule,
+        MatCardModule,
+        MatSliderModule,
+        MatOptionModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatSlideToggleModule,
+        MatListModule
+    ],
 })
 export class WebModule {
 }
