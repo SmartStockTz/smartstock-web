@@ -16,12 +16,7 @@ import {Component, OnInit} from '@angular/core';
               <rect x="362" y="426" width="100" height="100" fill="#19A730"/>
               <rect x="505" y="426" width="100" height="100" fill="#19A730"/>
             </svg>
-
-<!--            <img class="mb-2" src="../../../web-mock/src/assets/img/ss_logo_black.svg" alt="SmartStock" width="100">-->
           </h4>
-<!--          <p class="d-block  text-muted">© 2017-2020</p>-->
-<!--          <p class="d-block text-small  text-muted">+255764943055</p>-->
-<!--          <p class="d-block  text-muted">mama27j@gmail.com</p>-->
           <ul class="list-unstyled text-small">
             <li><a class="text-muted">© 2017-2020</a></li>
             <li><a class="text-muted">+255764943055</a></li>
@@ -36,54 +31,21 @@ import {Component, OnInit} from '@angular/core';
             <li><a class="text-muted" href="#">Realtime Reports</a></li>
             <li><a class="text-muted" href="#">Desktop Apps</a></li>
             <li><a class="text-muted" href="#">Free Front Shop</a></li>
-            <!--              <li><a class="text-muted" href="#">Last time</a></li>-->
           </ul>
         </div>
         <div class="col-6 col-md">
           <h4>Resources</h4>
           <mat-list>
               <a mat-list-item target="_blank" href="https://snapcraft.io/smartstock" class="snap-store col-sm-10">
-                <!--                <img alt="Get it from the Snap Store"-->
-                <!--                     src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"/>-->
               </a>
-              <a mat-list-item class="windows-store col-sm-10 my-2" target="_blank" href="">                <!--                <img alt="Get it from the Snap Store"-->
-                <!--                     src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"/>-->
+              <a mat-list-item class="windows-store col-sm-10 my-2" target="_blank" href="https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/smartstock.exe">                <!--                <img alt="Get it from the Snap Store"-->
               </a>
               <a mat-list-item class="play-store col-sm-10"
                 target="_blank"
                 href='https://play.google.com/store/apps/details?id=com.fahamutech.smartstock&pcampaignid=
-                pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>                <!--                <img alt="Get it from the Snap Store"-->
-                <!--                     src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"/>-->
+                pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
               </a>
           </mat-list>
-<!--          <ul class="list-unstyled text-small ">-->
-<!--            <li class="snap-store">-->
-<!--              <a target="_blank" href="https://snapcraft.io/smartstock" class=" bg-danger">-->
-<!--&lt;!&ndash;                <img alt="Get it from the Snap Store"&ndash;&gt;-->
-<!--&lt;!&ndash;                     src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"/>&ndash;&gt;-->
-<!--              </a>-->
-<!--            </li>-->
-<!--            <li style="margin-top: 4px">-->
-<!--              <a class="text-muted" target="_blank"-->
-<!--                 href="">-->
-<!--                <img style="background: black" width="182" alt="Download for windows"-->
-<!--                     src="/assets/img/window_badge.png">-->
-<!--              </a>-->
-<!--            </li>-->
-<!--            &lt;!&ndash;        <li><a class="text-muted" href="#">MacOS Application</a></li>&ndash;&gt;-->
-<!--            <li style="margin-top: 4px">-->
-<!--              &lt;!&ndash;          <a class="text-muted" href="">Android Application</a>&ndash;&gt;-->
-<!--              <a-->
-<!--                target="_blank"-->
-<!--                href='https://play.google.com/store/apps/details?id=com.fahamutech.smartstock&pcampaignid=-->
-<!--                pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>-->
-<!--                <img width="182" alt='Get it on Google Play'-->
-<!--                     style="background-color: black"-->
-<!--                     src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>-->
-<!--              </a>-->
-<!--            </li>-->
-<!--            &lt;!&ndash;        <li><a class="text-muted" href="#">iOS Application</a></li>&ndash;&gt;-->
-<!--          </ul>-->
         </div>
         <div class="col-6 col-md">
           <h4>About</h4>
@@ -96,15 +58,6 @@ import {Component, OnInit} from '@angular/core';
           </ul>
         </div>
       </div>
-
-<!--      <div class="foo">-->
-<!--        <div class="row m-0">-->
-<!--          <h6 class="col-12">+255 764 943 055</h6>-->
-<!--          <h6 class="col-12">smartstocktz@gmail.com</h6>-->
-<!--          <div class="col-md-6 text-right">-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
 
     </footer>
   `,
