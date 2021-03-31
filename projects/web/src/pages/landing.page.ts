@@ -9,7 +9,8 @@ import {FormControl} from '@angular/forms';
       <div class="mask-text">
         <h1 class="header-text text-center"></h1>
       </div>
-      <nav [ngClass]="animateNavBar ? 'hide-nav-bar' : ''" class="navbar w-100 position-fixed navbar-expand-lg navbar-light shadow p-3 ">
+      <nav [ngClass]="animateNavBar ? 'hide-nav-bar' : ''"
+           class="navbar w-100 position-fixed navbar-expand-lg navbar-light shadow p-3 ">
         <div class="container">
           <a class="navbar-brand" href="">
             SmartStock
@@ -31,7 +32,8 @@ import {FormControl} from '@angular/forms';
       </nav>
       <div id="header" class="header">
         <section class="header-sm d-flex flex-column container ">
-          <div class="header-img flex-grow-1 container d-flex align-items-start justify-content-center flex-column"></div>
+          <div
+            class="header-img flex-grow-1 container d-flex align-items-start justify-content-center flex-column"></div>
           <div class="row m-0">
             <div class="flex-grow-1 container d-flex align-items-start justify-content-center flex-column">
               <h1 class="header-text">AI Powered Sales and Stock Management Software...</h1>
@@ -169,7 +171,7 @@ import {FormControl} from '@angular/forms';
                 We can customize it just the way you want!
               </p>
               <hr class="mb-0">
-              <h2 class="link mb-0 p-4 text-white">CONTACT US</h2>
+              <h2 class="link mb-0 p-4 text-white" (click)="maximazeTawk()">CONTACT US</h2>
             </div>
           </div>
         </section>
@@ -272,6 +274,14 @@ export class LandingPage implements OnInit {
     } else {
       this.lastScroll = currentY;
       this.animateNavBar = false;
+    }
+  }
+
+  maximazeTawk(): void {
+    // @ts-ignore
+    if (window.$_Tawk) {
+      // @ts-ignore
+      window.$_Tawk.maximize();
     }
   }
 }
