@@ -1,6 +1,6 @@
 {
   "name": "@smartstocktz/web",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/smartstocktz"
   },

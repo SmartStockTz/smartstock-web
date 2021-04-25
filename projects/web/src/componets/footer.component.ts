@@ -42,7 +42,7 @@ import {Component, OnInit} from '@angular/core';
               </a>
               <a mat-list-item class="play-store col-sm-10"
                 target="_blank"
-                href='https://play.google.com/store/apps/details?id=com.fahamutech.smartstock&pcampaignid=
+                href='https://play.google.com/store/apps/details?id=com.fahamutech.smartstockbusiness&pcampaignid=
                 pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
               </a>
           </mat-list>

@@ -1,4 +1,4 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormControl} from '@angular/forms';
 
@@ -189,6 +189,7 @@ export class LandingPage implements OnInit {
   lastScroll = 0;
 
   constructor(private router: Router) {
+    document.title = 'SmartStock';
   }
 
   activateDiscount = false;
