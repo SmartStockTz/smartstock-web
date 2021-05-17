@@ -26,23 +26,39 @@ a {
   text-decoration: none;
   color: #000000;
 }
-.snap-store{
-  background: #252525 url("/assets/img/snap-store-badge.svg") no-repeat center;
+
+.snap-store {
+  background: #000000 url("https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/bd625fcf-2a25-419e-9f8e-ecbb02bdbc89-snapstorebadge.png") no-repeat center;
   border-radius: 8px;
   background-size: contain;
+  width: 169px;
+  height: 48px;
 }
 
-.windows-store{
-  background: #000000 url("/assets/img/window_badge.png") no-repeat center;
+.windows-store {
+  background: #000000 url("https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/827162ca-7249-4e5e-ab93-b35bd69f3d91-windowbadge.png") no-repeat center;
   border-radius: 8px;
   background-size: contain;
+  width: 169px;
+  height: 48px;
 }
 
-.play-store{
+.mac-store {
+  background: #000000 url("https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/c0497bab-4198-4c8f-ad8f-2a387cd5f4fb-downloadformac.png") no-repeat center;
+  border-radius: 8px;
+  background-size: contain;
+  width: 169px;
+  height: 48px;
+}
+
+.play-store {
   background: #000000 url("/assets/img/google_play_badge.png") no-repeat center;
   border-radius: 8px;
   background-size: contain;
+  width: 169px;
+  height: 48px;
 }
+
 footer {
   padding: 3vh 0;
 }

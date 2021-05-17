@@ -68,6 +68,26 @@ import {FormControl} from '@angular/forms';
           </div>
         </section>
       </div>
+      <div class="container" style="background: #fff">
+        <h1 style="text-align: center">Downloads</h1>
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap">
+          <a style="margin: 5px" target="_blank" href="https://snapcraft.io/smartstock" class="snap-store">
+          </a>
+          <a style="margin: 5px" class="windows-store" target="_blank"
+             href="https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/smartstock.exe">
+            <!--                <img alt="Get it from the Snap Store"-->
+          </a>
+          <a style="margin: 5px" class="mac-store" target="_blank"
+             href="https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/e54deab4-2b39-4548-8f77-17ad7692cf82-smartstock21.5.1build.6.dmg">
+            <!--                <img alt="Get it from the Snap Store"-->
+          </a>
+          <a style="margin: 5px" class="play-store"
+             target="_blank"
+             href='https://play.google.com/store/apps/details?id=com.fahamutech.smartstockbusiness&pcampaignid=
+                pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+          </a>
+        </div>
+      </div>
       <section class="why-smartstock" id="why-us" [ngClass]="animateWhyUsDiv ? 'visible' : ''">
         <div class="section-header ">
           <h1>Why SmartStock?</h1>
@@ -181,7 +201,7 @@ import {FormControl} from '@angular/forms';
       </div>
     </div>
   `,
-  styleUrls: ['../styles/landing.style.scss']
+  styleUrls: ['../styles/landing.style.scss', '../styles/footer.style.scss']
 })
 export class LandingPage implements OnInit {
   animateWhyUsDiv = false;
