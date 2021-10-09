@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {BFast} from 'bfastjs';
 import {Router} from '@angular/router';
-import {StorageService} from '@smartstocktz/core-libs';
+import {getDaasAddress, getFaasAddress, StorageService, UserService} from '@smartstocktz/core-libs';
+import {auth, init} from "bfast";
 
 @Component({
   selector: 'app-login',
@@ -37,7 +37,7 @@ export class LoginPageComponent implements OnInit {
 
   constructor(private readonly formBuilder: FormBuilder,
               private readonly router: Router,
-              private readonly storageService: StorageService,
+              private readonly userService: UserService,
               private readonly snack: MatSnackBar) {
   }
 
@@ -46,15 +46,17 @@ export class LoginPageComponent implements OnInit {
       this.snack.open('Please fill all required fields', 'Ok', {duration: 3000});
     } else {
       this.isLogin = true;
-      BFast.auth().logIn(this.loginForm.value.username, this.loginForm.value.password)
+      auth().logIn(this.loginForm.value.username, this.loginForm.value.password)
         .then(async user => {
           this.router.navigateByUrl('/stock').catch(console.log);
-          BFast.init({
+          init({
             applicationId: user.applicationId,
-            projectId: user.projectId
+            projectId: user.projectId,
+            databaseURL: getDaasAddress(user),
+            functionsURL: getFaasAddress(user)
           }, user.projectId);
-          await this.storageService.saveCurrentProjectId('0UTYLQKeifrk');
-          await this.storageService.saveActiveShop(user as any);
+          // await this.userService.saveCurrentProjectId('0UTYLQKeifrk');
+          await this.userService.saveCurrentShop(user as any);
         })
         .catch(reason => {
           this.snack.open(reason && reason.message ? reason.message : reason, 'Ok');
