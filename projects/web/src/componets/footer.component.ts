@@ -22,9 +22,10 @@ import {Component, OnInit} from '@angular/core';
             </svg>
           </h4>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted">© 2017-2020</a></li>
+            <li><a class="text-muted">© 2017-2021</a></li>
             <li><a class="text-muted">+255764943055</a></li>
             <li><a class="text-muted">mama27j@gmail.com</a></li>
+            <li><a class="text-muted">smartstocktz@gmail.com</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
@@ -41,13 +42,14 @@ import {Component, OnInit} from '@angular/core';
           <h4>Resources</h4>
           <mat-list>
             <a mat-list-item target="_blank" href="https://snapcraft.io/smartstock" class="snap-store col-sm-10">
+<!--              <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />-->
             </a>
             <a mat-list-item class="windows-store col-sm-10 my-2" target="_blank"
-               href="https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/smartstock.exe">
+               href="https://smartstock-faas.bfast.fahamutech.com/downloads/win">
               <!--                <img alt="Get it from the Snap Store"-->
             </a>
             <a mat-list-item class="mac-store col-sm-10 my-2" target="_blank"
-               href="https://smartstock-daas.bfast.fahamutech.com/storage/smartstock_lb/file/e54deab4-2b39-4548-8f77-17ad7692cf82-smartstock21.5.1build.6.dmg">
+               href="https://smartstock-faas.bfast.fahamutech.com/downloads/mac">
               <!--                <img alt="Get it from the Snap Store"-->
             </a>
             <a mat-list-item class="play-store col-sm-10"
