@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "publish": "ng build -c production && cd dist/web && npm publish --ignore-scripts",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -43,7 +44,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^12.2.3",
+    "ng-packagr": "^13.0.0-next.8",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
