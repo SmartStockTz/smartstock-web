@@ -14,6 +14,12 @@ import {BrowserPlatformGuard} from './guards/browser-platform.guard';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatListModule} from '@angular/material/list';
+import {LibModule} from '@smartstocktz/core-libs';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MallDrawerComponent} from './componets/mall-drawer.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -28,31 +34,37 @@ const routes: Routes = [
   declarations: [
     LandingPage,
     FooterComponent,
-    PrivacyPageComponent
+    PrivacyPageComponent,
+    MallDrawerComponent
   ],
-    imports: [
-        CommonModule,
+  imports: [
+    CommonModule,
+    {
+      providers: [
         {
-            providers: [
-                {
-                    multi: true,
-                    provide: ROUTES,
-                    useValue: routes
-                }
-            ],
-            ngModule: RouterModule
-        },
-        MatDividerModule,
-        FormsModule,
-        MatCardModule,
-        MatSliderModule,
-        MatOptionModule,
-        MatSelectModule,
-        ReactiveFormsModule,
-        MatButtonModule,
-        MatSlideToggleModule,
-        MatListModule
-    ],
+          multi: true,
+          provide: ROUTES,
+          useValue: routes
+        }
+      ],
+      ngModule: RouterModule
+    },
+    MatDividerModule,
+    FormsModule,
+    MatCardModule,
+    MatSliderModule,
+    MatOptionModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatSlideToggleModule,
+    MatListModule,
+    LibModule,
+    MatDialogModule,
+    MatBottomSheetModule,
+    MatToolbarModule,
+    MatIconModule
+  ],
 })
 export class WebModule {
 }
