@@ -15,10 +15,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {init} from 'bfast';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {
     path: '', loadChildren: () => import('../../../web/src/public-api').then(mod => mod.WebModule)
+  },
+  {
+    path: 'account', loadChildren: () => import('@smartstocktz/accounts').then(mod => mod.AccountModule)
   }
 ];
 
@@ -40,7 +45,9 @@ const routes: Routes = [
     MatButtonModule,
     MatInputModule,
     MatDialogModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

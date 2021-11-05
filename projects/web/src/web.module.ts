@@ -20,6 +20,11 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MallDrawerComponent} from './componets/mall-drawer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {LandingDesktopComponent} from './componets/landing-desktop.component';
+import {JoinPromotionComponent} from './componets/join-promotion.component';
+import {MallFiltersDrawerComponent} from './componets/mall-filters-drawer.component';
+import {MallsComponent} from './componets/malls.component';
+import {MallComponent} from './componets/mall.component';
 
 const routes: Routes = [
   {
@@ -35,7 +40,12 @@ const routes: Routes = [
     LandingPage,
     FooterComponent,
     PrivacyPageComponent,
-    MallDrawerComponent
+    MallDrawerComponent,
+    LandingDesktopComponent,
+    JoinPromotionComponent,
+    MallFiltersDrawerComponent,
+    MallsComponent,
+    MallComponent
   ],
   imports: [
     CommonModule,
