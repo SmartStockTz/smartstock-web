@@ -1,13 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {DeviceState} from '@smartstocktz/core-libs';
+import {MallState} from '../states/mall.state';
 
 @Component({
   selector: 'app-landing',
   template: `
     <app-layout-sidenav
       [body]="body"
-      searchPlaceholder="Search shop or product..."
+      searchPlaceholder="Search shop..."
       [showSearch]="true"
+      (searchCallback)="searchShop($event)"
+      [showProgress]="(mallState.loadMalls | async) === true"
       [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
       [leftDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [rightDrawer]="filter"
@@ -35,10 +38,16 @@ import {DeviceState} from '@smartstocktz/core-libs';
 })
 export class LandingPage implements OnInit {
 
-  constructor(public readonly deviceState: DeviceState) {
+  constructor(public readonly deviceState: DeviceState,
+              public readonly mallState: MallState) {
     document.title = 'SmartStock';
   }
 
   ngOnInit(): void {
+  }
+
+  searchShop(q: string): void {
+    console.log(q);
+    this.mallState.searchShop(q);
   }
 }

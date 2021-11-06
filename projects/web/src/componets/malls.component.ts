@@ -5,8 +5,12 @@ import {MallState} from '../states/mall.state';
   selector: 'app-malls',
   template: `
     <div class="malls-container">
-      <p *ngIf="mallsState.loadMalls | async">Loading...</p>
-      <app-mall *ngFor="let mall of mallsState.malls | async" [mall]="mall"></app-mall>
+      <p *ngIf="mallsState.loadMalls | async" style="display: flex; align-items: center">
+        <mat-progress-spinner style="display: inline-block" mode="indeterminate" diameter="20" color="primary"></mat-progress-spinner> Loading...
+      </p>
+      <app-mall *ngFor="let mall of mallsState.malls | async"
+                [mall]="mall">
+      </app-mall>
     </div>
   `,
   styleUrls: ['../styles/malls.style.scss']

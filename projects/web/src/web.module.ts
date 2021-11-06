@@ -25,6 +25,9 @@ import {JoinPromotionComponent} from './componets/join-promotion.component';
 import {MallFiltersDrawerComponent} from './componets/mall-filters-drawer.component';
 import {MallsComponent} from './componets/malls.component';
 import {MallComponent} from './componets/mall.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
   {
@@ -73,7 +76,10 @@ const routes: Routes = [
     MatDialogModule,
     MatBottomSheetModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    ScrollingModule,
+    InfiniteScrollModule,
+    MatProgressSpinnerModule
   ],
 })
 export class WebModule {

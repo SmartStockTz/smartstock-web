@@ -22,10 +22,11 @@
     "@angular/platform-browser": "~12.2.13",
     "@angular/platform-browser-dynamic": "~12.2.13",
     "@angular/router": "~12.2.13",
-    "@smartstocktz/core-libs": "^0.3.7",
     "@smartstocktz/accounts": "^0.2.11",
+    "@smartstocktz/core-libs": "^0.3.8",
     "bfast": "^6.0.0-alpha.15",
     "comlink": "^4.3.1",
+    "ngx-infinite-scroll": "^10.0.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"

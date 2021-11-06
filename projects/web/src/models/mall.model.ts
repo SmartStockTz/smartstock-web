@@ -7,6 +7,9 @@ export type MallModel = {
       cover: string;
       about: string;
     };
+    settings: {
+      currency: string;
+    };
     projectId: string;
     country: string;
     region: string;

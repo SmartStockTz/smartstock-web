@@ -9,7 +9,8 @@ import {Component} from '@angular/core';
         Join SmartStock today for free.
       </p>
       <div class="actions">
-        <button routerLink="/account/login" color="primary" mat-button>JOIN NOW</button>
+        <button routerLink="/account/register" color="primary" mat-button>REGISTER NOW</button>
+        <button routerLink="/account/login" color="primary" mat-button>LOGIN</button>
       </div>
     </div>
   `,
