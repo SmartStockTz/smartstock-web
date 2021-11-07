@@ -15,6 +15,7 @@ import {DeviceState} from '@smartstocktz/core-libs';
         <app-mall-drawer [currentMenu]="'downloads'"></app-mall-drawer>
       </ng-template>
       <ng-template #body>
+        <app-downloads></app-downloads>
       </ng-template>
     </app-layout-sidenav>
   `,

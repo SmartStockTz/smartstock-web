@@ -32,6 +32,12 @@ import {PricingPage} from './pages/pricing.page';
 import {AboutPage} from './pages/about.page';
 import {FeaturesPage} from './pages/features.page';
 import {DownloadsPage} from './pages/downloads.page';
+import {PricingComponent} from './componets/pricing.component';
+import {FreePricingComponent} from './componets/free-pricing.component';
+import {PaidPricingComponent} from './componets/paid-pricing.component';
+import {DownloadsComponent} from './componets/downloads.component';
+import {DesktopDownloadsComponent} from './componets/desktop-downloads.component';
+import {MobileDownloadsComponent} from './componets/mobile-downloads.component';
 
 const routes: Routes = [
   {
@@ -68,7 +74,13 @@ const routes: Routes = [
     PricingPage,
     AboutPage,
     FeaturesPage,
-    DownloadsPage
+    DownloadsPage,
+    PricingComponent,
+    FreePricingComponent,
+    PaidPricingComponent,
+    DownloadsComponent,
+    DesktopDownloadsComponent,
+    MobileDownloadsComponent
   ],
   imports: [
     CommonModule,

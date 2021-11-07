@@ -20,7 +20,7 @@ export class MallState {
   }
 
   fetchMalls(size: number, skip: number, d?: (d: boolean) => void): void {
-    this.loadMalls.next(true);
+    setTimeout(() => this.loadMalls.next(true), 0);
     this.mallsService.shops(size, skip, this.query.value).then(value => {
       if (skip === 0) {
         this.malls.next(value);

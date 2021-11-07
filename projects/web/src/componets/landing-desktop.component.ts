@@ -18,7 +18,7 @@ import {MallState} from '../states/mall.state';
                 mat-button color="primary" *ngIf="(mallState.loadMoreMalls  |async) === false">
           Load More
         </button>
-        <mat-progress-spinner *ngIf="(mallState.loadMoreMalls  |async) === true"
+        <mat-progress-spinner *ngIf="(mallState.loadMoreMalls  | async) === true"
                               [diameter]="20"
                               color="primary"
                               mode="indeterminate">
@@ -43,7 +43,7 @@ export class LandingDesktopComponent implements OnInit {
   }
 
   onScroll(): void {
-    console.log('scrolled');
+    // console.log('scrolled');
     this.mallState.fetchMoreMalls(20);
   }
 }
