@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LandingPage} from './pages/landing.page';
 import {FooterComponent} from './componets/footer.component';
-import {PrivacyPageComponent} from './pages/privacy.page';
+import {PrivacyPage} from './pages/privacy.page';
 import {RouterModule, ROUTES, Routes} from '@angular/router';
 import {MatDividerModule} from '@angular/material/divider';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -28,13 +28,29 @@ import {MallComponent} from './componets/mall.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {PricingPage} from './pages/pricing.page';
+import {AboutPage} from './pages/about.page';
+import {FeaturesPage} from './pages/features.page';
+import {DownloadsPage} from './pages/downloads.page';
 
 const routes: Routes = [
   {
     path: '', canActivate: [BrowserPlatformGuard], component: LandingPage
   },
   {
-    path: 'privacy', canActivate: [BrowserPlatformGuard], component: PrivacyPageComponent
+    path: 'privacy', canActivate: [BrowserPlatformGuard], component: PrivacyPage
+  },
+  {
+    path: 'pricing', canActivate: [BrowserPlatformGuard], component: PricingPage
+  },
+  {
+    path: 'downloads', canActivate: [BrowserPlatformGuard], component: DownloadsPage
+  },
+  {
+    path: 'about', canActivate: [BrowserPlatformGuard], component: AboutPage
+  },
+  {
+    path: 'features', canActivate: [BrowserPlatformGuard], component: FeaturesPage
   },
 ];
 
@@ -42,13 +58,17 @@ const routes: Routes = [
   declarations: [
     LandingPage,
     FooterComponent,
-    PrivacyPageComponent,
+    PrivacyPage,
     MallDrawerComponent,
     LandingDesktopComponent,
     JoinPromotionComponent,
     MallFiltersDrawerComponent,
     MallsComponent,
-    MallComponent
+    MallComponent,
+    PricingPage,
+    AboutPage,
+    FeaturesPage,
+    DownloadsPage
   ],
   imports: [
     CommonModule,

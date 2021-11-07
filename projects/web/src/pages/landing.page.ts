@@ -22,7 +22,7 @@ import {MallState} from '../states/mall.state';
         <app-mall-filters-drawer></app-mall-filters-drawer>
       </ng-template>
       <ng-template #side>
-        <app-mall-drawer></app-mall-drawer>
+        <app-mall-drawer [currentMenu]="'mall'"></app-mall-drawer>
       </ng-template>
       <ng-template #body>
         <app-landing-desktop></app-landing-desktop>

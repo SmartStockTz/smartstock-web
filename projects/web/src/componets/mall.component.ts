@@ -29,7 +29,7 @@ import {StockModel} from '@smartstocktz/core-libs';
         <div id="in">
           <div *ngFor="let product of products" class="product-preview">
             <span class="preview-category">{{product.category}}</span>
-            <span class="preview-name">{{product.product}}</span>
+            <span class="preview-name text-truncate">{{product.product}}</span>
             <span
               class="preview-price">{{mall?.shop?.settings?.currency ? mall?.shop?.settings?.currency : 'Tsh'}} {{product.retailPrice | number}}</span>
           </div>
