@@ -3,6 +3,7 @@ import {BehaviorSubject} from 'rxjs';
 import {MallService} from '../sevices/mall.service';
 import {MallModel} from '../models/mall.model';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {query} from '@angular/animations';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,7 @@ export class MallState {
   fetchMalls(size: number, skip: number, d?: (d: boolean) => void): void {
     setTimeout(() => this.loadMalls.next(true), 0);
     this.mallsService.shops(size, skip, this.query.value).then(value => {
+      this.query.next('');
       if (skip === 0) {
         this.malls.next(value);
       } else {

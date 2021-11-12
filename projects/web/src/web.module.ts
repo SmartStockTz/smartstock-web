@@ -44,6 +44,11 @@ const routes: Routes = [
     path: '', canActivate: [BrowserPlatformGuard], component: LandingPage
   },
   {
+    path: 'shops/:id',
+    loadChildren: () =>
+      import('@smartstocktz/ecommerce').then((value) => value.EcommerceModule),
+  },
+  {
     path: 'privacy', canActivate: [BrowserPlatformGuard], component: PrivacyPage
   },
   {

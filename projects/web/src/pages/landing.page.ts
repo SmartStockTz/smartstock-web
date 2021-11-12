@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DeviceState} from '@smartstocktz/core-libs';
 import {MallState} from '../states/mall.state';
 
@@ -36,7 +36,7 @@ import {MallState} from '../states/mall.state';
   `,
   styleUrls: ['../styles/landing.style.scss', '../styles/footer.style.scss']
 })
-export class LandingPage implements OnInit {
+export class LandingPage implements OnInit, OnDestroy {
 
   constructor(public readonly deviceState: DeviceState,
               public readonly mallState: MallState) {
@@ -49,5 +49,9 @@ export class LandingPage implements OnInit {
   searchShop(q: string): void {
     console.log(q);
     this.mallState.searchShop(q);
+  }
+
+  ngOnDestroy(): void {
+    this.mallState.malls.next([]);
   }
 }
