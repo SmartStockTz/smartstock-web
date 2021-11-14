@@ -17,7 +17,7 @@ import {StockModel} from '@smartstocktz/core-libs';
       <hr class="line">
       <img *ngIf="showCover" (error)="imgError($event)" src="{{mall?.shop?.ecommerce?.cover}}"
            alt="cover photo" class="cover">
-      <p class="about">{{mall?.shop?.ecommerce?.about}}</p>
+      <p class="about text-wrap">{{mall?.shop?.ecommerce?.about}}</p>
       <div class="tabs">
         <mat-icon color="primary">dashboard</mat-icon>
         <span>Products</span>

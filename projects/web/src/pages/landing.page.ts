@@ -16,7 +16,7 @@ import {MallState} from '../states/mall.state';
       [rightDrawer]="filter"
       [rightDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [rightDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
-      [cartIcon]="'filter_alt'"
+      [cartIcon]="'info_outline'"
       [leftDrawer]="side">
       <ng-template #filter>
         <app-mall-filters-drawer></app-mall-filters-drawer>
@@ -47,11 +47,12 @@ export class LandingPage implements OnInit, OnDestroy {
   }
 
   searchShop(q: string): void {
-    console.log(q);
+    // console.log(q);
     this.mallState.searchShop(q);
   }
 
   ngOnDestroy(): void {
     this.mallState.malls.next([]);
+    this.mallState.query.next('');
   }
 }

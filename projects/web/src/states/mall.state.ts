@@ -3,7 +3,6 @@ import {BehaviorSubject} from 'rxjs';
 import {MallService} from '../sevices/mall.service';
 import {MallModel} from '../models/mall.model';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {query} from '@angular/animations';
 
 @Injectable({
   providedIn: 'root'
@@ -13,17 +12,19 @@ export class MallState {
   malls: BehaviorSubject<MallModel[]> = new BehaviorSubject([]);
   loadMalls = new BehaviorSubject(false);
   loadMoreMalls = new BehaviorSubject(false);
-  private query = new BehaviorSubject('');
+  query = new BehaviorSubject('');
   private $skip = 20;
 
   constructor(private readonly mallsService: MallService,
               private readonly snack: MatSnackBar) {
   }
 
-  fetchMalls(size: number, skip: number, d?: (d: boolean) => void): void {
-    setTimeout(() => this.loadMalls.next(true), 0);
+  fetchMalls(size: number, skip: number, d?: (d: boolean) => void, lm = false): void {
+    if (lm === false) {
+      setTimeout(() => this.loadMalls.next(true), 0);
+    }
     this.mallsService.shops(size, skip, this.query.value).then(value => {
-      this.query.next('');
+      // this.query.next('');
       if (skip === 0) {
         this.malls.next(value);
       } else {
@@ -38,8 +39,12 @@ export class MallState {
         duration: 2000
       });
     }).finally(() => {
-      this.loadMalls.next(false);
-      this.loadMoreMalls.next(false);
+      if (lm === false) {
+        this.loadMalls.next(false);
+      }
+      if (lm === true) {
+        this.loadMoreMalls.next(false);
+      }
     });
   }
 
@@ -59,7 +64,7 @@ export class MallState {
         this.$skip += size;
         // }
       }
-    });
+    }, true);
   }
 
   searchShop(q: string): void {

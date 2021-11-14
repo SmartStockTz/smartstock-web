@@ -11,9 +11,10 @@ import {MallState} from '../states/mall.state';
          [infiniteScrollDistance]="1"
          [infiniteScrollThrottle]="100"
          (scrolled)="onScroll()">
-      <app-join-promotion *ngIf="showPromo"></app-join-promotion>
-      <app-malls></app-malls>
-      <div style="display: flex; justify-content: center; align-items: center">
+      <app-join-promotion class="land-container-item" *ngIf="showPromo"></app-join-promotion>
+      <app-malls class="land-container-item"></app-malls>
+      <div class="land-container-item"
+           style="display: flex; justify-content: center; align-items: center">
         <button (click)="onScroll()"
                 mat-button color="primary" *ngIf="(mallState.loadMoreMalls  |async) === false">
           Load More

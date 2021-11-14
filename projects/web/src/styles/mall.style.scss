@@ -24,7 +24,6 @@
 }
 
 .name {
-
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -32,10 +31,7 @@
   line-height: 21px;
   /* identical to box height */
   margin-left: 9px;
-
-
   color: #000000;
-
 }
 
 .logo {
@@ -52,10 +48,9 @@
   font-size: 18px;
   line-height: 21px;
   padding: 6px 13px;
+  overflow: hidden;
   /* identical to box height */
-
   color: #000000;
-
 }
 
 
