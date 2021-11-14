@@ -1,0 +1,12 @@
+.download-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
+  min-height: 100vh
+}
+
+.download-container-item{
+  width: 100%;
+  max-width: 670px;
+}

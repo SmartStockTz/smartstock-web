@@ -1,0 +1,27 @@
+.promotion-container {
+  //width: 745px;
+  height: 115px;
+  margin: 5px 24px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 18px;
+}
+
+.p-text {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+
+  margin-bottom: 20px;
+}
+
+.actions{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

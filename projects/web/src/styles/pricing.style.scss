@@ -1,0 +1,29 @@
+.pricing-container {
+  background: #F5F5F5;
+  padding: 16px 23px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //margin-bottom: 100px;
+  min-height: 100vh
+}
+
+.pricing-container-item{
+  width: 100%;
+  max-width: 670px;
+}
+
+.free-pricing-container {
+  background: #F5F5F5;
+  padding: 16px 23px;
+  overflow: auto;
+  max-width: 798px;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 8px;
+}
