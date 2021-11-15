@@ -15,7 +15,9 @@ import {StockModel} from '@smartstocktz/core-libs';
         </button>
       </div>
       <hr class="line">
-      <img *ngIf="showCover" (error)="imgError($event)" src="{{mall?.shop?.ecommerce?.cover}}"
+      <img *ngIf="showCover"
+           routerLink="/shops/{{mall.shop.projectId}}"
+           (error)="imgError($event)" src="{{mall?.shop?.ecommerce?.cover}}"
            alt="cover photo" class="cover">
       <p class="about text-wrap">{{mall?.shop?.ecommerce?.about}}</p>
       <div class="tabs">

@@ -8,6 +8,8 @@ import {DeviceState} from '@smartstocktz/core-libs';
       [body]="body"
       [heading]="'Downloads'"
       [showSearch]="false"
+      [showBottomBar]="false"
+      [showModuleMenu]="true"
       [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
       [leftDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [leftDrawer]="side">

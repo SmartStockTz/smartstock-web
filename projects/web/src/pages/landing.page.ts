@@ -14,6 +14,8 @@ import {MallState} from '../states/mall.state';
       [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
       [leftDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [rightDrawer]="filter"
+      [showBottomBar]="false"
+      [showModuleMenu]="true"
       [rightDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [rightDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
       [cartIcon]="'info_outline'"

@@ -13,6 +13,7 @@ import {MallState} from '../states/mall.state';
          (scrolled)="onScroll()">
       <app-join-promotion class="land-container-item" *ngIf="showPromo"></app-join-promotion>
       <app-malls class="land-container-item"></app-malls>
+
       <div class="land-container-item"
            style="display: flex; justify-content: center; align-items: center">
         <button (click)="onScroll()"

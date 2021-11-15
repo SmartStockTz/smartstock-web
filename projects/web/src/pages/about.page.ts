@@ -8,14 +8,15 @@ import {DeviceState} from '@smartstocktz/core-libs';
       [body]="body"
       [heading]="'About'"
       [showSearch]="false"
+      [showBottomBar]="false"
+      [showModuleMenu]="true"
       [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
       [leftDrawerOpened]="(deviceState.enoughWidth | async) === true"
       [leftDrawer]="side">
       <ng-template #side>
         <app-mall-drawer [currentMenu]="'about'"></app-mall-drawer>
       </ng-template>
-      <ng-template #body>
-      </ng-template>
+      <ng-template #body></ng-template>
     </app-layout-sidenav>
   `,
   styleUrls: []
