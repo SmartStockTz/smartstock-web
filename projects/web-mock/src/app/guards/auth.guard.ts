@@ -3,6 +3,7 @@ import {ActivatedRouteSnapshot, CanActivate, Route, Router, RouterStateSnapshot,
 import {Observable} from 'rxjs';
 import {init, auth} from 'bfast';
 import {getDaasAddress, getFaasAddress} from '@smartstocktz/core-libs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +20,13 @@ export class AuthGuard implements CanActivate {
         init({
           applicationId: user.applicationId,
           projectId: user.projectId,
-          databaseURL: getDaasAddress(user),
-          functionsURL: getFaasAddress(user)
+          databaseURL: getDaasAddress(user, environment.baseFaasUrl),
+          functionsURL: getFaasAddress(user, environment.baseFaasUrl),
+          adapters: {
+            auth: 'DEFAULT',
+            cache: 'DEFAULT',
+            http: 'DEFAULT'
+          }
         }, user.projectId);
         resolve(true);
       } else {

@@ -3,8 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
-import {WelcomePage} from './pages/welcome.page';
-import {LoginPageComponent} from './pages/login.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -17,6 +15,8 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {init} from 'bfast';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http';
+import {SmartstockHttpAdapter} from '@smartstocktz/core-libs';
+import {environment} from '../environments/environment';
 
 const routes: Routes = [
   {
@@ -29,9 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WelcomePage,
-    LoginPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -53,10 +51,15 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
+  constructor(private readonly smartstockHttp: SmartstockHttpAdapter) {
     init({
       applicationId: 'smartstock_lb',
-      projectId: 'smartstock'
+      projectId: 'smartstock',
+      databaseURL: environment.baseDaasUrl,
+      functionsURL: environment.baseFaasUrl,
+      adapters: {
+        http: _ => this.smartstockHttp
+      }
     });
   }
 }

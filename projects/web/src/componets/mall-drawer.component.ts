@@ -11,8 +11,16 @@ import {UserService} from '@smartstocktz/core-libs';
       </mat-toolbar>
       <p class="menu-title">Menu</p>
       <button routerLink="/" mat-button [class]="currentMenu==='mall'?'menu-selected':'menu-not-selected'">
+        <mat-icon color="primary">home</mat-icon>
+        <span class="menu-text">Home</span>
+      </button>
+      <button routerLink="/shops/default/cart" mat-button [class]="currentMenu==='cart'?'menu-selected':'menu-not-selected'">
         <mat-icon color="primary">shopping_cart</mat-icon>
-        <span class="menu-text">Shopping Mall</span>
+        <span class="menu-text">Cart</span>
+      </button>
+      <button routerLink="/shops/default/orders" mat-button [class]="currentMenu==='orders'?'menu-selected':'menu-not-selected'">
+        <mat-icon color="primary">receipt</mat-icon>
+        <span class="menu-text">Orders</span>
       </button>
       <button routerLink="/account/shop" *ngIf="isBusiness" mat-button
               [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">

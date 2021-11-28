@@ -27,7 +27,12 @@ export class MallService {
       // @ts-ignore
       databaseURL: getDaasAddress(mall.shop),
       // @ts-ignore
-      functionsURL: getFaasAddress(mall.shop)
+      functionsURL: getFaasAddress(mall.shop),
+      adapters: {
+        auth: 'DEFAULT',
+        cache: 'DEFAULT',
+        http: 'DEFAULT'
+      }
     }, mall.shop.projectId);
     return database(mall.shop.projectId).table('stocks').query().size(6).find();
   }
