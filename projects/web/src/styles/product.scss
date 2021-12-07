@@ -1,0 +1,132 @@
+.product-item {
+  width: 243px;
+  background: transparent;
+  padding: 0 8px 16px 8px;
+  text-align: start;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  :hover{
+    cursor: pointer;
+  }
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 8px 40px 8px;
+}
+
+.products-container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  //padding-top: 16px;
+  height: 100% !important;
+  overflow-y: scroll;
+
+  ngx-masonry {
+    margin: 0 auto;
+  }
+}
+
+.products-container-item {
+  //width: 100%;
+}
+
+.product-item-detail {
+  text-align: start;
+  margin-top: 8px;
+}
+
+.product-item-detail-no-image {
+  text-align: start;
+  min-height: 100px;
+  background: #0C3E17;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-item-detail-category {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.product-item-detail-link{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #b5b5b5;
+  text-align: start;
+}
+
+.product-item-detail-price {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  margin: 0;
+
+
+  color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-item {
+    width: 191px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .product-item {
+    width: 171px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .product-item {
+    width: 191px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .product-item {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .product-item {
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .product-item {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .product-item {
+    width: 130px;
+  }
+}

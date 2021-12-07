@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {database, functions, init} from 'bfast';
 import {MallModel} from '../models/mall.model';
 import {getDaasAddress, getFaasAddress, StockModel} from '@smartstocktz/core-libs';
+import {MallProduct} from '../models/mall-product';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,15 @@ export class MallService {
       }
     }, mall.shop.projectId);
     return database(mall.shop.projectId).table('stocks').query().size(6).find();
+  }
+
+  async products(size: number, skip: number, q: string): Promise<MallProduct[]> {
+    return functions().request('/mall/products').get({
+      params: {
+        size,
+        skip,
+        q
+      }
+    });
   }
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { LandingPage } from '../pages/landing.page';
+import { ShopsPage } from '../pages/shops.page';
 
 describe('LandingComponent', () => {
-  let component: LandingPage;
-  let fixture: ComponentFixture<LandingPage>;
+  let component: ShopsPage;
+  let fixture: ComponentFixture<ShopsPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LandingPage ]
+      declarations: [ ShopsPage ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LandingPage);
+    fixture = TestBed.createComponent(ShopsPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,8 +11,8 @@ import {StockModel} from '@smartstocktz/core-libs';
         <img *ngIf="!logoError" (error)="hideLogo()" class="logo" src="{{mall?.shop?.ecommerce?.logo}}" alt="Logo">
         <span class="name">{{mall?.shop?.businessName}}</span>
         <span style="flex: 1 1 auto"></span>
-        <button routerLink="/shops/{{mall.shop.projectId}}" mat-button color="primary" class="view-shop">View Shop
-        </button>
+        <!--        <button routerLink="/shops/{{mall.shop.projectId}}" mat-button color="primary" class="view-shop">View Shop-->
+        <!--        </button>-->
       </div>
       <hr class="line">
       <img *ngIf="showCover"
@@ -29,7 +29,8 @@ import {StockModel} from '@smartstocktz/core-libs';
       </a>
       <div *ngIf="hasProducts" class="product-preview-container">
         <div id="in">
-          <div *ngFor="let product of products" class="product-preview">
+          <div routerLink="/shops/{{mall.shop.projectId}}" [queryParams]="{product: product.product}"
+               *ngFor="let product of products" class="product-preview">
             <span class="preview-category">{{product.category}}</span>
             <span class="preview-name text-truncate">{{product.product}}</span>
             <span

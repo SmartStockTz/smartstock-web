@@ -3,12 +3,13 @@ import {DeviceState} from '@smartstocktz/core-libs';
 import {MallState} from '../states/mall.state';
 
 @Component({
-  selector: 'app-landing',
+  selector: 'app-shops',
   template: `
     <app-layout-sidenav
       [body]="body"
       searchPlaceholder="Search shop..."
       [showSearch]="true"
+      color="'#fff'"
       (searchCallback)="searchShop($event)"
       [showProgress]="(mallState.loadMalls | async) === true"
       [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
@@ -24,25 +25,20 @@ import {MallState} from '../states/mall.state';
         <app-mall-filters-drawer></app-mall-filters-drawer>
       </ng-template>
       <ng-template #side>
-        <app-mall-drawer [currentMenu]="'mall'"></app-mall-drawer>
+        <app-mall-drawer [currentMenu]="'shops'"></app-mall-drawer>
       </ng-template>
       <ng-template #body>
         <app-landing-desktop></app-landing-desktop>
       </ng-template>
     </app-layout-sidenav>
-    <!--    <div class="bg-white w-100 p-0 m-0">-->
-    <!--      <div id="footer" class="container">-->
-    <!--        <app-footer></app-footer>-->
-    <!--      </div>-->
-    <!--    </div>-->
   `,
   styleUrls: ['../styles/landing.style.scss', '../styles/footer.style.scss']
 })
-export class LandingPage implements OnInit, OnDestroy {
+export class ShopsPage implements OnInit, OnDestroy {
 
   constructor(public readonly deviceState: DeviceState,
               public readonly mallState: MallState) {
-    document.title = 'SmartStock';
+    document.title = 'SmartStock - Shops';
   }
 
   ngOnInit(): void {
@@ -54,7 +50,6 @@ export class LandingPage implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mallState.malls.next([]);
-    this.mallState.query.next('');
+    this.mallState.dispose();
   }
 }

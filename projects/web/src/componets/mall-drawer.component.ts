@@ -14,6 +14,10 @@ import {UserService} from '@smartstocktz/core-libs';
         <mat-icon color="primary">home</mat-icon>
         <span class="menu-text">Home</span>
       </button>
+      <button routerLink="/shops" mat-button [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">
+        <mat-icon color="primary">business</mat-icon>
+        <span class="menu-text">Shops</span>
+      </button>
       <button routerLink="/shops/default/cart" mat-button [class]="currentMenu==='cart'?'menu-selected':'menu-not-selected'">
         <mat-icon color="primary">shopping_cart</mat-icon>
         <span class="menu-text">Cart</span>
@@ -22,11 +26,11 @@ import {UserService} from '@smartstocktz/core-libs';
         <mat-icon color="primary">receipt</mat-icon>
         <span class="menu-text">Orders</span>
       </button>
-      <button routerLink="/account/shop" *ngIf="isBusiness" mat-button
-              [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">
-        <mat-icon color="primary">business</mat-icon>
-        <span class="menu-text">Your Shops</span>
-      </button>
+<!--      <button routerLink="/account/shop" *ngIf="isBusiness" mat-button-->
+<!--              [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">-->
+<!--        <mat-icon color="primary">business</mat-icon>-->
+<!--        <span class="menu-text">Your Shops</span>-->
+<!--      </button>-->
       <button routerLink="/pricing" mat-button [class]="currentMenu==='pricing'?'menu-selected':'menu-not-selected'">
         <mat-icon color="primary">money</mat-icon>
         <span class="menu-text">Pricing</span>
