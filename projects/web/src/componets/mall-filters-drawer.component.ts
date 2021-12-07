@@ -7,9 +7,9 @@ import {UserService} from '@smartstocktz/core-libs';
     <div class="filter-drawer">
       <mat-toolbar class="filter-container">
         <span style="flex: 1 1 auto"></span>
-        <button *ngIf="!isLogIn" routerLink="/account/login" mat-button color="primary" class="button">Login</button>
-        <button *ngIf="!isLogIn" routerLink="/account/register" mat-button color="primary" class="button">Register
-        </button>
+<!--        <button *ngIf="!isLogIn" routerLink="/account/login" mat-button color="primary" class="button">Login</button>-->
+<!--        <button *ngIf="!isLogIn" routerLink="/account/register" mat-button color="primary" class="button">Register-->
+<!--        </button>-->
       </mat-toolbar>
     </div>
   `,

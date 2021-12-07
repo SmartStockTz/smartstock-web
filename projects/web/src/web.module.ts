@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {LandingPage} from './pages/landing.page';
+import {ShopsPage} from './pages/shops.page';
 import {FooterComponent} from './componets/footer.component';
 import {PrivacyPage} from './pages/privacy.page';
 import {RouterModule, ROUTES, Routes} from '@angular/router';
@@ -10,7 +10,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatOptionModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
-import {BrowserPlatformGuard} from './guards/browser-platform.guard';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatListModule} from '@angular/material/list';
@@ -20,8 +19,8 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MallDrawerComponent} from './componets/mall-drawer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {LandingDesktopComponent} from './componets/landing-desktop.component';
-import {JoinPromotionComponent} from './componets/join-promotion.component';
+import {Shops} from './componets/shops';
+import {Promotion} from './componets/promotion';
 import {MallFiltersDrawerComponent} from './componets/mall-filters-drawer.component';
 import {MallsComponent} from './componets/malls.component';
 import {MallComponent} from './componets/mall.component';
@@ -38,41 +37,53 @@ import {PaidPricingComponent} from './componets/paid-pricing.component';
 import {DownloadsComponent} from './componets/downloads.component';
 import {DesktopDownloadsComponent} from './componets/desktop-downloads.component';
 import {MobileDownloadsComponent} from './componets/mobile-downloads.component';
+import {ProductsPage} from './pages/products.page';
+import {Products} from './componets/products';
+import {NgxMasonryModule} from 'ngx-masonry';
+import {Product} from './componets/product';
 
 const routes: Routes = [
   {
-    path: '', canActivate: [BrowserPlatformGuard], component: LandingPage
+    path: '', component: ProductsPage
+  },
+  {
+    path: 'products', component: ProductsPage
+  },
+  {
+    path: 'shops', component: ShopsPage
   },
   {
     path: 'shops/:id',
-    loadChildren: () =>
-      import('@smartstocktz/ecommerce').then((value) => value.EcommerceModule),
+    loadChildren: () => import('@smartstocktz/ecommerce').then(value => value.EcommerceModule),
   },
   {
-    path: 'privacy', canActivate: [BrowserPlatformGuard], component: PrivacyPage
+    path: 'privacy', component: PrivacyPage
   },
   {
-    path: 'pricing', canActivate: [BrowserPlatformGuard], component: PricingPage
+    path: 'pricing', component: PricingPage
   },
   {
-    path: 'downloads', canActivate: [BrowserPlatformGuard], component: DownloadsPage
+    path: 'downloads', component: DownloadsPage
   },
   {
-    path: 'about', canActivate: [BrowserPlatformGuard], component: AboutPage
+    path: 'about', component: AboutPage
   },
   {
-    path: 'features', canActivate: [BrowserPlatformGuard], component: FeaturesPage
+    path: 'features', component: FeaturesPage
   },
 ];
 
 @NgModule({
   declarations: [
-    LandingPage,
+    ProductsPage,
+    Products,
+    Product,
+    ShopsPage,
     FooterComponent,
     PrivacyPage,
     MallDrawerComponent,
-    LandingDesktopComponent,
-    JoinPromotionComponent,
+    Shops,
+    Promotion,
     MallFiltersDrawerComponent,
     MallsComponent,
     MallComponent,
@@ -85,7 +96,8 @@ const routes: Routes = [
     PaidPricingComponent,
     DownloadsComponent,
     DesktopDownloadsComponent,
-    MobileDownloadsComponent
+    MobileDownloadsComponent,
+    Products
   ],
   imports: [
     CommonModule,
@@ -116,7 +128,8 @@ const routes: Routes = [
     MatIconModule,
     ScrollingModule,
     InfiniteScrollModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgxMasonryModule
   ],
 })
 export class WebModule {

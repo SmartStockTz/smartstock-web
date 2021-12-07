@@ -8,10 +8,10 @@ import {MallState} from '../states/mall.state';
     <div class="land-container"
          infinite-scroll
          [scrollWindow]="false"
-         [infiniteScrollDistance]="1"
+         [infiniteScrollDistance]="2"
          [infiniteScrollThrottle]="100"
          (scrolled)="onScroll()">
-      <app-join-promotion class="land-container-item" *ngIf="showPromo"></app-join-promotion>
+      <app-join-promotion style="padding: 0 16px;" class="land-container-item"></app-join-promotion>
       <app-malls class="land-container-item"></app-malls>
 
       <div class="land-container-item"
@@ -31,17 +31,12 @@ import {MallState} from '../states/mall.state';
   styleUrls: ['../styles/landing-desktop.style.scss']
 })
 
-export class LandingDesktopComponent implements OnInit {
-  showPromo = false;
+export class Shops implements OnInit {
 
-  constructor(public readonly userService: UserService,
-              public readonly mallState: MallState) {
+  constructor(public readonly mallState: MallState) {
   }
 
   ngOnInit(): void {
-    this.userService.currentUser().then(value => {
-      this.showPromo = !(value && value.id);
-    });
   }
 
   onScroll(): void {
