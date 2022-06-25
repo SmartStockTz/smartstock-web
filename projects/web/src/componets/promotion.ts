@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {UserService} from '@smartstocktz/core-libs';
-import {Router} from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { UserService } from "smartstock-core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-join-promotion',
+  selector: "app-join-promotion",
   template: `
     <div class="promotion-container">
       <p class="promo-title">
@@ -23,38 +23,43 @@ import {Router} from '@angular/router';
       <div class="promo-shops">
         <div (click)="setActiveShop(shop)" *ngFor="let shop of shops">
           <button mat-button class="promo-button">
-            <span>{{shop.businessName}}</span>
+            <span>{{ shop.businessName }}</span>
           </button>
         </div>
       </div>
     </div>
   `,
-  styleUrls: ['../styles/join-promotion.style.scss']
+  styleUrls: ["../styles/join-promotion.style.scss"]
 })
 export class Promotion implements OnInit {
   showPromo = false;
   shops = [];
 
-  constructor(private readonly userService: UserService,
-              private readonly router: Router) {
-  }
+  constructor(
+    private readonly userService: UserService,
+    private readonly router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.userService.currentUser().then(async value => {
-      if (!value) {
+    this.userService
+      .currentUser()
+      .then(async (value) => {
+        if (!value) {
+          this.showPromo = true;
+          return [];
+        }
+        return this.userService.getShops(value);
+      })
+      .then((shops) => {
+        this.shops = shops;
+      })
+      .catch((_34) => {
         this.showPromo = true;
-        return [];
-      }
-      return this.userService.getShops(value);
-    }).then(shops => {
-      this.shops = shops;
-    }).catch(_34 => {
-      this.showPromo = true;
-    });
+      });
   }
 
   async setActiveShop(shop: any): Promise<void> {
     await this.userService.saveCurrentShop(shop);
-    this.router.navigateByUrl('/dashboard').catch(console.log);
+    this.router.navigateByUrl("/dashboard").catch(console.log);
   }
 }

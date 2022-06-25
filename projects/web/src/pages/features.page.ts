@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {DeviceState} from '@smartstocktz/core-libs';
+import { Component } from "@angular/core";
+import { DeviceState } from "smartstock-core";
 
 @Component({
-  selector: 'app-pricing-page',
+  selector: "app-pricing-page",
   template: `
     <app-layout-sidenav
       [body]="body"
@@ -10,20 +10,20 @@ import {DeviceState} from '@smartstocktz/core-libs';
       [showSearch]="false"
       [showBottomBar]="false"
       [showModuleMenu]="true"
-      [leftDrawerMode]="(deviceState.enoughWidth | async) === true?'side':'over'"
+      [leftDrawerMode]="
+        (deviceState.enoughWidth | async) === true ? 'side' : 'over'
+      "
       [leftDrawerOpened]="(deviceState.enoughWidth | async) === true"
-      [leftDrawer]="side">
+      [leftDrawer]="side"
+    >
       <ng-template #side>
         <app-mall-drawer [currentMenu]="'features'"></app-mall-drawer>
       </ng-template>
-      <ng-template #body>
-      </ng-template>
+      <ng-template #body> </ng-template>
     </app-layout-sidenav>
   `,
   styleUrls: []
 })
-
 export class FeaturesPage {
-  constructor(public readonly deviceState: DeviceState) {
-  }
+  constructor(public readonly deviceState: DeviceState) {}
 }
