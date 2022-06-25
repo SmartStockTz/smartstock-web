@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {DeviceState} from '@smartstocktz/core-libs';
-import {MallState} from '../states/mall.state';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { DeviceState } from "smartstock-core";
+import { MallState } from "../states/mall.state";
 
 @Component({
-  selector: 'app-products-page',
+  selector: "app-products-page",
   template: `
     <app-layout-sidenav
       [body]="body"
@@ -19,7 +19,8 @@ import {MallState} from '../states/mall.state';
       [showBottomBar]="false"
       [showModuleMenu]="true"
       [cartIcon]="'info_outline'"
-      [leftDrawer]="side">
+      [leftDrawer]="side"
+    >
       <ng-template #side>
         <app-mall-drawer [currentMenu]="'mall'"></app-mall-drawer>
       </ng-template>
@@ -28,13 +29,14 @@ import {MallState} from '../states/mall.state';
       </ng-template>
     </app-layout-sidenav>
   `,
-  styleUrls: ['../styles/landing.style.scss', '../styles/footer.style.scss']
+  styleUrls: ["../styles/landing.style.scss", "../styles/footer.style.scss"]
 })
 export class ProductsPage implements OnInit, OnDestroy {
-
-  constructor(public readonly deviceState: DeviceState,
-              public readonly mallState: MallState) {
-    document.title = 'SmartStock - Products';
+  constructor(
+    public readonly deviceState: DeviceState,
+    public readonly mallState: MallState
+  ) {
+    document.title = "SmartStock - Products";
   }
 
   ngOnInit(): void {

@@ -1,37 +1,63 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {UserService} from '@smartstocktz/core-libs';
+import { Component, Input, OnInit } from "@angular/core";
+import { UserService } from "smartstock-core";
 
 @Component({
-  selector: 'app-mall-drawer',
+  selector: "app-mall-drawer",
   template: `
     <div class="drawer">
       <mat-toolbar class="brand">
-        <img class="logo" src="assets/img/sslogo.png">
+        <img class="logo" src="assets/img/sslogo.png" />
         <span class="logo-text">SmartStock</span>
       </mat-toolbar>
       <p class="menu-title">Menu</p>
-      <button routerLink="/" mat-button [class]="currentMenu==='mall'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/"
+        mat-button
+        [class]="currentMenu === 'mall' ? 'menu-selected' : 'menu-not-selected'"
+      >
         <mat-icon color="primary">home</mat-icon>
         <span class="menu-text">Home</span>
       </button>
-      <button routerLink="/shops" mat-button [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/shops"
+        mat-button
+        [class]="
+          currentMenu === 'shops' ? 'menu-selected' : 'menu-not-selected'
+        "
+      >
         <mat-icon color="primary">business</mat-icon>
         <span class="menu-text">Shops</span>
       </button>
-      <button routerLink="/shops/default/cart" mat-button [class]="currentMenu==='cart'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/shops/default/cart"
+        mat-button
+        [class]="currentMenu === 'cart' ? 'menu-selected' : 'menu-not-selected'"
+      >
         <mat-icon color="primary">shopping_cart</mat-icon>
         <span class="menu-text">Cart</span>
       </button>
-      <button routerLink="/shops/default/orders" mat-button [class]="currentMenu==='orders'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/shops/default/orders"
+        mat-button
+        [class]="
+          currentMenu === 'orders' ? 'menu-selected' : 'menu-not-selected'
+        "
+      >
         <mat-icon color="primary">receipt</mat-icon>
         <span class="menu-text">Orders</span>
       </button>
-<!--      <button routerLink="/account/shop" *ngIf="isBusiness" mat-button-->
-<!--              [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">-->
-<!--        <mat-icon color="primary">business</mat-icon>-->
-<!--        <span class="menu-text">Your Shops</span>-->
-<!--      </button>-->
-      <button routerLink="/pricing" mat-button [class]="currentMenu==='pricing'?'menu-selected':'menu-not-selected'">
+      <!--      <button routerLink="/account/shop" *ngIf="isBusiness" mat-button-->
+      <!--              [class]="currentMenu==='shops'?'menu-selected':'menu-not-selected'">-->
+      <!--        <mat-icon color="primary">business</mat-icon>-->
+      <!--        <span class="menu-text">Your Shops</span>-->
+      <!--      </button>-->
+      <button
+        routerLink="/pricing"
+        mat-button
+        [class]="
+          currentMenu === 'pricing' ? 'menu-selected' : 'menu-not-selected'
+        "
+      >
         <mat-icon color="primary">money</mat-icon>
         <span class="menu-text">Pricing</span>
       </button>
@@ -39,12 +65,23 @@ import {UserService} from '@smartstocktz/core-libs';
       <!--        <mat-icon color="primary">widgets</mat-icon>-->
       <!--        <span class="menu-text">Features</span>-->
       <!--      </button>-->
-      <button routerLink="/downloads" mat-button
-              [class]="currentMenu==='downloads'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/downloads"
+        mat-button
+        [class]="
+          currentMenu === 'downloads' ? 'menu-selected' : 'menu-not-selected'
+        "
+      >
         <mat-icon color="primary">get_app</mat-icon>
         <span class="menu-text">Downloads</span>
       </button>
-      <button routerLink="/privacy" mat-button [class]="currentMenu==='privacy'?'menu-selected':'menu-not-selected'">
+      <button
+        routerLink="/privacy"
+        mat-button
+        [class]="
+          currentMenu === 'privacy' ? 'menu-selected' : 'menu-not-selected'
+        "
+      >
         <mat-icon color="primary">security</mat-icon>
         <span class="menu-text">Privacy</span>
       </button>
@@ -54,22 +91,20 @@ import {UserService} from '@smartstocktz/core-libs';
       <!--      </button>-->
     </div>
   `,
-  styleUrls: ['../styles/mall-drawer.style.scss']
+  styleUrls: ["../styles/mall-drawer.style.scss"]
 })
-
 export class MallDrawerComponent implements OnInit {
   logIn = false;
-  @Input() currentMenu = '';
+  @Input() currentMenu = "";
   isBusiness = false;
 
-  constructor(private readonly userService: UserService) {
-  }
+  constructor(private readonly userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.currentUser().then(value => {
+    this.userService.currentUser().then((value) => {
       setTimeout(() => {
         this.logIn = !!(value && value.id);
-        this.isBusiness = !!(value && value.role !== 'online');
+        this.isBusiness = !!(value && value.role !== "online");
       }, 100);
     });
   }
