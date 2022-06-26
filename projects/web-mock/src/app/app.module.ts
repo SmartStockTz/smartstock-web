@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: "account",
     loadChildren: () =>
-      import("smartstockt-accounts").then((mod) => mod.AccountModule)
+      import("smartstock-accounts").then((mod) => mod.AccountModule)
   }
 ];
 
