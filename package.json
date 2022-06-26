@@ -6,7 +6,7 @@
     "box": "yarn install && yarn start",
     "start": "ng serve",
     "build": "ng build",
-    "publish": "ng build -c production && cd dist/web && npm publish --ignore-scripts",
+    "publish": "ng build -c production --project=web && cd dist/web && npm publish --ignore-scripts",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
