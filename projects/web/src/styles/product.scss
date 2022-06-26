@@ -1,3 +1,11 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .product-item {
   width: 243px;
   background: transparent;
@@ -9,7 +17,8 @@
     height: auto;
     border-radius: 8px;
   }
-  :hover{
+
+  :hover {
     cursor: pointer;
   }
 }
@@ -65,7 +74,7 @@
   color: #000000;
 }
 
-.product-item-detail-link{
+.product-item-detail-link {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 200;

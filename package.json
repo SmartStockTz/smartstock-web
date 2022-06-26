@@ -1,6 +1,6 @@
 {
   "name": "smartstock-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "box": "yarn install && yarn start",
@@ -25,14 +25,12 @@
     "@angular/router": "^14.0.3",
     "bfast": "6.0.1",
     "comlink": "^4.3.1",
-    "masonry-layout": "4.2.2",
     "moment": "2.29.3",
     "ngx-infinite-scroll": "13.0.2",
-    "ngx-masonry": "13.0.0",
     "rxjs": "~7.4.0",
-    "smartstock-accounts": "1.0.0",
-    "smartstock-core": "1.0.1",
-    "smartstock-shop": "1.0.0",
+    "smartstock-accounts": "1.0.1",
+    "smartstock-core": "1.0.2",
+    "smartstock-shop": "1.0.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },

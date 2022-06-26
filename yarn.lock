@@ -3527,11 +3527,6 @@ dependency-graph@^0.11.0:
   resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.11.0.tgz#ac0ce7ed68a54da22165a85e97a01d53f5eb2e27"
   integrity sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==
 
-desandro-matches-selector@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/desandro-matches-selector/-/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
-  integrity sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
-
 destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
@@ -4081,11 +4076,6 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-ev-emitter@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
-  integrity sha512-ipiDYhdQSCZ4hSbX4rMW+XzNKMD1prg/sTvoVmSLkuQ1MVlwjJQQA+sW8tMYR3BLUr9KjodFV4pvzunvRhd33Q==
-
 eventemitter-asyncresource@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eventemitter-asyncresource/-/eventemitter-asyncresource-1.0.0.tgz#734ff2e44bf448e627f7748f905d6bdd57bdb65b"
@@ -4279,13 +4269,6 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-fizzy-ui-utils@^2.0.0:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/fizzy-ui-utils/-/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
-  integrity sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg==
-  dependencies:
-    desandro-matches-selector "^2.0.0"
-
 flatted@^3.2.5:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
@@ -4412,11 +4395,6 @@ get-package-type@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/get-package-type/-/get-package-type-0.1.0.tgz#8de2d803cff44df3bc6c456e6668b36c3926e11a"
   integrity sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==
-
-get-size@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/get-size/-/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
-  integrity sha512-lXNzT/h/dTjTxRbm9BXb+SGxxzkm97h/PCIKtlN/CBCxxmkkIVV21udumMS93MuVTDX583gqc94v3RjuHmI+2Q==
 
 get-stream@^6.0.0:
   version "6.0.1"
@@ -5554,14 +5532,6 @@ make-fetch-happen@^9.1.0:
     socks-proxy-agent "^6.0.0"
     ssri "^8.0.0"
 
-masonry-layout@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/masonry-layout/-/masonry-layout-4.2.2.tgz#d57b44af13e601bfcdc423f1dd8348b5524de348"
-  integrity sha512-iGtAlrpHNyxaR19CvKC3npnEcAwszXoyJiI8ARV2ePi7fmYhIud25MHK8Zx4P0LCC4d3TNO9+rFa1KoK1OEOaA==
-  dependencies:
-    get-size "^2.0.2"
-    outlayer "^2.1.0"
-
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -5881,13 +5851,6 @@ ngx-infinite-scroll@13.0.2:
   dependencies:
     tslib "^2.3.0"
 
-ngx-masonry@13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/ngx-masonry/-/ngx-masonry-13.0.0.tgz#03a74a10fd655d9ce383dc6b81972c920ff76a75"
-  integrity sha512-orNkCPe1KJqHrRkcUB/WACM+ufBqEv2mkGCQ7Nn7ThOs+XaHlcYdyXHBjf6IT0nBzlLl+ypGVYJ8hbGX8VI+Mw==
-  dependencies:
-    tslib "^2.0.0"
-
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
@@ -6160,15 +6123,6 @@ os-tmpdir@~1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
-
-outlayer@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/outlayer/-/outlayer-2.1.1.tgz#29863b6de10ea5dadfffcadfa0d728907387e9a2"
-  integrity sha1-KYY7beEOpdrf/8rfoNcokHOH6aI=
-  dependencies:
-    ev-emitter "^1.0.0"
-    fizzy-ui-utils "^2.0.0"
-    get-size "^2.0.2"
 
 p-limit@^2.2.0:
   version "2.3.0"
@@ -7517,24 +7471,24 @@ smart-buffer@^4.1.0, smart-buffer@^4.2.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
-smartstock-accounts@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/smartstock-accounts/-/smartstock-accounts-1.0.0.tgz#4833fc650a469c26d224e14f336601d8c86e6776"
-  integrity sha512-H1GpoCiRqoVivVoZ+atMqKxtt+qHjfX/qOVHQPez6hEDUqyPQ5gZpdOcvOOvz3Nutv+zWPIMRXFsVhAFvlbENg==
-  dependencies:
-    tslib "^2.0.0"
-
-smartstock-core@1.0.1:
+smartstock-accounts@1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/smartstock-core/-/smartstock-core-1.0.1.tgz#a9036725e8b6a8a2d7225c6356cd9309ef70ddc6"
-  integrity sha512-MEFGz2eYGnKMnEy1bU2sLAziVmTL8jVGnuXhYExOuvZnAcYmVzsf3zy+gHwKeK8Fv2z6YxWsiMBEfAWe5120Pg==
+  resolved "https://registry.yarnpkg.com/smartstock-accounts/-/smartstock-accounts-1.0.1.tgz#ca51195d2f4c1511418a2f90bd0784191abd7ac3"
+  integrity sha512-8gcEnQwc99GE6eQfXAm+S6kgj4MTRCdHzYBKnBbKrf4DyIkIDC/ya2mkngkDjnkj6ciTSehjkqtwSML50i+ajw==
   dependencies:
     tslib "^2.0.0"
 
-smartstock-shop@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/smartstock-shop/-/smartstock-shop-1.0.0.tgz#3f47721d6fbdd063cab1325ed3976ce70d18a2be"
-  integrity sha512-FmKf6mr6uNrsAaXhO8b+sT8Q+GiFhhCOAKeoACihggFftlFM2qK/c7FotYeloF1rPYoGHw0t+1IWzr8mhZoaYA==
+smartstock-core@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/smartstock-core/-/smartstock-core-1.0.2.tgz#530f2950b4448a1ac006fbc38388fb650b000503"
+  integrity sha512-b4rMY8g7ClMRK55OTBrm4opvzg9SbSc6eihUY56vCFjAEAbDBCTNdRgP1JfazY/aSbweoq8285/KTgxkxDDO1A==
+  dependencies:
+    tslib "^2.0.0"
+
+smartstock-shop@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/smartstock-shop/-/smartstock-shop-1.0.1.tgz#c8fe2ef4fcf2f5fec18155ed5198a1cf283a498a"
+  integrity sha512-fKX5R02bR9E7zctVsWc4nsL2wvPxZiHKLw/3BQQmLwxwByhTbpWM/sPoF3Oe9cD86Bxox+S/+K2Ms+6YDigm3Q==
   dependencies:
     tslib "^2.0.0"
 

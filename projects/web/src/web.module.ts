@@ -39,7 +39,6 @@ import { DesktopDownloadsComponent } from "./componets/desktop-downloads.compone
 import { MobileDownloadsComponent } from "./componets/mobile-downloads.component";
 import { ProductsPage } from "./pages/products.page";
 import { Products } from "./componets/products";
-import { NgxMasonryModule } from "ngx-masonry";
 import { Product } from "./componets/product";
 
 const routes: Routes = [
@@ -137,8 +136,7 @@ const routes: Routes = [
     MatIconModule,
     ScrollingModule,
     InfiniteScrollModule,
-    MatProgressSpinnerModule,
-    NgxMasonryModule
+    MatProgressSpinnerModule
   ]
 })
 export class WebModule {}
